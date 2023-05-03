@@ -1,5 +1,7 @@
 const username:string='pablobyte';
-const sum(a:number,b:number)=>{
+const username1:string | number ='pablim';
+const username2 ='pablim';
+const sum = (a:number,b:number)=>{
   return a+b;
 }
 
