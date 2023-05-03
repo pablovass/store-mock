@@ -1,3 +1,13 @@
+<!--Uso de *ngIf -->
+<h1>NG *ngIf </h1>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"/>
+<p *ngIf="person.name ==='pablo'">soy pablo</p>
+<p *ngIf="person.name ==='raula'&& person.age===18; else elseBlock"  >soy raula</p>
+<ng-template #elseBlock>
+<p>Bloque de else</p>
+
+</ng-template>
+<hr/>
 <!--Data binding con ngModel siempre esta pendiente de la interaccion con los eventos
 para utilizarlo tenes que avilitarlo en app.models.ts-->
 <h1>NG model </h1>
