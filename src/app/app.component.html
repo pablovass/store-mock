@@ -1,3 +1,10 @@
+<!--Event Binding de Angular eventos en angulaar  -->
+<h1>eventos </h1>
+<button [disabled] ="btnDisabled">Enviar envento</button>
+<button (click)="toggleButton()">Toggle Button</button>
+<p>Edad {{person.age}}</p>
+<button (click)="increaseAge()">age++</button>
+<hr/>
 <!---Property Binding  es modificar atributos y enviarlos hacia html  [value]-->
 <h1> Propiedades </h1>
 <button [disabled]="btnDisabled">Enviar desde property blinding </button>

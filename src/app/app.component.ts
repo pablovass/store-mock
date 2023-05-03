@@ -17,6 +17,14 @@ export class AppComponent {
     age:21,
     avatar: 'https://img.freepik.com/vector-premium/diseno-ilustracion-vector-personaje-avatar-hombre-joven_24877-18514.jpg?w=826'
   }
+  toggleButton(){
+    //this.btnDisabled=false;
+    this.btnDisabled=!this.btnDisabled;
+  }
+  increaseAge(){
+    this.person.age+=1;
+  }
+
 }
 
 
