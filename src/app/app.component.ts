@@ -10,6 +10,13 @@ export class AppComponent {
   age=19;
   title = 'store-mock';
   img='https://www.vectorlogo.zone/logos/angular/angular-icon.svg';
+  btnDisabled=true;
+
+  person={
+    name:'pablo',
+    age:21,
+    avatar: 'https://img.freepik.com/vector-premium/diseno-ilustracion-vector-personaje-avatar-hombre-joven_24877-18514.jpg?w=826'
+  }
 }
 
 
