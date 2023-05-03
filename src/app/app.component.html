@@ -4,6 +4,17 @@
 <button (click)="toggleButton()">Toggle Button</button>
 <p>Edad {{person.age}}</p>
 <button (click)="increaseAge()">age++</button>
+<!-- el scroll de un elemento-->
+<div class="box" (scroll)="onScroll($event)">
+  <p>
+    De esta manera, Git no modificará automáticamente los saltos de línea de los archivos en tu repositorio. También puedes convertir manualmente los saltos de línea de tus archivos al formato deseado antes de agregarlos al repositorio para evitar el warning.
+    De esta manera, Git no modificará automáticamente los saltos de línea de los archivos en tu repositorio. También puedes convertir manualmente los saltos de línea de tus archivos al formato deseado antes de agregarlos al repositorio para evitar el warning.
+
+  </p>
+</div>
+<p>Nonbre {{person.name}}</p>
+<input type="text" [value]="person.name"(keyup)="changeName($event)"/>
+
 <hr/>
 <!---Property Binding  es modificar atributos y enviarlos hacia html  [value]-->
 <h1> Propiedades </h1>
