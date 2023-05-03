@@ -33,7 +33,21 @@ export class AppComponent {
     const element= event.target as HTMLInputElement;
     this.person.name =element.value;
   }
+names: string[] = [
+    'juan',
+    'pablo',
+    'rman'
+  ];
+  newName = '';
 
+  addName(){
+    this.names.push(this.newName);
+    this.newName="";
+  }
+  deleteName(index : number){
+    this.names.splice(index,1);
+
+  }
 }
 
 
