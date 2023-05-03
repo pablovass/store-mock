@@ -1,3 +1,12 @@
+<!--Data binding con ngModel siempre esta pendiente de la interaccion con los eventos
+para utilizarlo tenes que avilitarlo en app.models.ts-->
+<h1>NG model </h1>
+<p>Nombre {{person.name}}</p>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"/>
+<p>Valid {{nameInput.valid}}</p>
+<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age"/>
+<p>Valid {{ageInput.valid}}</p>
+<hr/>
 <!--Event Binding de Angular eventos en angulaar  -->
 <h1>eventos </h1>
 <button [disabled] ="btnDisabled">Enviar envento</button>
