@@ -40,6 +40,11 @@ names: string[] = [
     'pablo',
     'rman'
   ];
+  box={
+    width:10,
+    height:10,
+    background:'red'
+  }
   newName = '';
 
   addName(){
