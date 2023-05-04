@@ -7,6 +7,7 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  widthImg=10;
   name ='pablo'; // por defecto tiene un acceso publico
   age=19;
   title = 'store-mock';

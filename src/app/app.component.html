@@ -1,3 +1,18 @@
+<!--Class and style-->
+<h1>Class and style</h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name">
+<p class="message-error" [class.invalid]="nameInput2.invalid">El campo es requerido</p>
+<label>Nombre</label>
+<input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name">
+<p [style.font-style]="nameInput3.invalid?'italic':'normal'">texto texto texto</p>
+<div>
+  <div>
+    <input type="text" [(ngModel)]="widthImg">
+  </div>
+  <!--<img width="100" [src]="person.avatar">-->
+  <img [style.width.px]="widthImg" [src]="person.avatar"/>
+</div>
+<hr/>
 <!--Uso de *ngSwitch-->
 <h1>ngSwitch</h1>
 <input type="text" required [(ngModel)]="person.name">
