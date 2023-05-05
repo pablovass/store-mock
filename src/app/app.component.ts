@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from './product.model';
+
+
 // esto es un decorador que le dice a angular como deve compotarse
 @Component({
   selector: 'app-root',
@@ -7,6 +9,7 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   widthImg=10;
   name ='pablo'; // por defecto tiene un acceso publico
   age=19;
@@ -18,6 +21,11 @@ export class AppComponent {
     name:'pablo',
     age:21,
     avatar: 'https://img.freepik.com/vector-premium/diseno-ilustracion-vector-personaje-avatar-hombre-joven_24877-18514.jpg?w=826'
+  }
+  register={
+    name:'',
+    email:'',
+    password:''
   }
   toggleButton(){
     //this.btnDisabled=false;
@@ -34,6 +42,9 @@ export class AppComponent {
   changeName(event :Event){
     const element= event.target as HTMLInputElement;
     this.person.name =element.value;
+  }
+  onRegister(){
+console.log(this.register);
   }
 names: string[] = [
     'juan',
@@ -55,6 +66,7 @@ names: string[] = [
     this.names.splice(index,1);
 
   }
+
   products:Product[] = [
     {
       name: 'EL mejor juguete',
@@ -88,6 +100,7 @@ names: string[] = [
       image: './assets/images/glasses.jpg'
     }
   ]
+
 }
 
 

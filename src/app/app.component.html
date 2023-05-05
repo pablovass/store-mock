@@ -1,3 +1,22 @@
+<!--crar formulario-->
+<h1> formulario</h1>
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
+  <div class="input-group">
+      <label for="name">Nombre</label>
+      <input name="name" required id="name" type="name" [(ngModel)]="register.name"  />
+  </div>
+  <div class="input-group">
+    <label for="email">Email</label>
+    <input required id="email" name="email" type="email" [(ngModel)]="register.email" required />
+</div>
+  <div>
+      <label class="input-group"></label>
+      <input required id="password" name="password" type="password" [(ngModel)]="register.password" required />
+  </div>
+  <div>
+      <button [disabled]="myForm.invalid"  type="submit">Registrar</button>
+  </div>
+</form>
 <!--NgClass y NgStyle-->
 <h1>NgClass y NgStyle</h1>
 <input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name">
@@ -6,7 +25,7 @@
   'valid':nameInput4.valid,
   'invalid':nameInput4.invalid
 }"/>
-<p class="message-error" [class.invalid]="nameInput2.invalid">El campo es requerido</p>
+<p class="message-error" [class.invalid]="nameInput.invalid">El campo es requerido</p>
 <div class="styles">
   <div>
     <input type="number" [(ngModel)]="box.width">
