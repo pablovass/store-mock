@@ -10,17 +10,20 @@ export class ImgComponent implements OnInit{
 //@Input() img:string='valor init';
 @Input() img:string='';
 @Output()loaded=new EventEmitter<string>();
-imgeDefault='./assets/images/default-img.jpg';
+imageDefault = './assets/images/default-img.jpg';
 
 constructor(){}
 
 ngOnInit(): void {}
 
-imgError(){
-this.img=this.imgeDefault;
+imgError() {
+  this.img = this.imageDefault;
 }
-imgLoaded(){
-console.log('log Hijo');
-this.loaded.emit(this.img); //le esta mandando informacion al padre cuando es exitos el envio
+
+imgLoaded() {
+  console.log('log hijo');
+  this.loaded.emit(this.img); //le esta mandando informacion al padre cuando es exitos el envio
 }
+
+
 }
