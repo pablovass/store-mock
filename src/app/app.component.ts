@@ -1,53 +1,47 @@
 import { Component } from '@angular/core';
+
 import { Product } from './models/product.model';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-//imgParent ='https://img.freepik.com/vector-premium/diseno-ilustracion-vector-personaje-avatar-hombre-joven_24877-18514.jpg?w=826';
-imgParent ='';
-products: Product[]=[
-  {
-    id: '1',
-    name: 'EL mejor juguete',
-    price: 565,
-    image: './assets/images/toy.jpg'
+  imgParent = '';
+  showImg = true;
+  products: Product[] = [
+    {
+      id: '1',
+      name: 'EL mejor juguete',
+      price: 565,
+      image: './assets/images/toy.jpg'
+    },
+    {
+      id: '2',
+      name: 'Bicicleta casi nueva',
+      price: 356,
+      image: './assets/images/bike.jpg'
+    },
+    {
+      id: '3',
+      name: 'Colleción de albumnes',
+      price: 34,
+      image: './assets/images/album.jpg'
+    },
+    {
+      id: '4',
+      name: 'Mis libros',
+      price: 23,
+      image: './assets/images/books.jpg'
+    },
+  ];
 
-  },
-  {
-    id:'2',
-    name: 'Bicicleta casi nueva',
-    price: 356,
-    image: './assets/images/bike.jpg'
-  },
-  {
-    id:'3',
-    name: 'Colleción de albumnes',
-    price: 34,
-    image: './assets/images/album.jpg'
-  },
-  {
-    id:'4',
-    name: 'Mis libros',
-    price: 23,
-    image: './assets/images/books.jpg'
-  },
-  {
-    id:'4',
-    name: 'Casa para perro',
-    price: 34,
-    image: './assets/images/house.jpg'
-  },
-  {
-    id:'5',
-    name: 'Gafas',
-    price: 3434,
-    image: './assets/images/glasses.jpg'
+  onLoaded(img: string) {
+    console.log('log padre', img);
   }
-];
-onLoaded(img:string){
-  console.log("log Padre",img)
-}
+
+  toggleImg() {
+    this.showImg = !this.showImg;
+  }
 }
