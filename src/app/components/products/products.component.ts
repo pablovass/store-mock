@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
-import { Product } from 'src/app/models/product.model';
+import { Component, OnInit } from '@angular/core';
+
+import { Product } from '../../models/product.model';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit {
+
   products: Product[] = [
     {
       id: '1',
@@ -32,4 +35,10 @@ export class ProductsComponent {
       image: './assets/images/books.jpg'
     },
   ];
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }
