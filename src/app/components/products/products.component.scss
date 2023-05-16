@@ -1,6 +1,9 @@
 .product--grid{
 display:flex;
 flex-direction: column;
+img{
+    border-radius: 10px;
+}
 }
 //tablet
 @media screen and (min-width: 40em)and (max-width:63.9em){
